@@ -1,0 +1,16 @@
+generate:
+  go_options:
+    import_path: github.com/refs/cs3-micro
+    extra_modifiers:
+      google/api/annotations.proto: google.golang.org/genproto/googleapis/api/annotations
+      google/api/http.proto: google.golang.org/genproto/googleapis/api/annotations
+
+  plugins:
+    - name : go
+      type: go
+      flags: plugins=grpc
+      output: build/go-cs3apis
+    - name : micro
+      type: go
+      flags: plugins=grpc
+      output: build/go-cs3apis
