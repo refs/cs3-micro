@@ -9,8 +9,8 @@ generate:
     - name : go
       type: go
       flags: plugins=grpc
-      output: build/go-cs3apis
+      output: proto
     - name : micro
       type: go
       flags: plugins=grpc
-      output: build/go-cs3apis
+      output: proto
