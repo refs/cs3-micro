@@ -35,7 +35,9 @@ func (h *authHandler) Authenticate(ctx context.Context, req *providerv1beta1.Aut
 	}
 
 	res.User = &userv1beta1.User{
-		Username: user.GetDisplayName(),
+		Username:    user.GetUsername(),
+		Mail:        user.GetMail(),
+		DisplayName: user.GetDisplayName(),
 	}
 
 	return nil
